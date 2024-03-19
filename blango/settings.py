@@ -41,6 +41,7 @@ class Dev(Configuration):
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
     CRISPY_TEMPLATE_PACK = "bootstrap5"
+    AUTH_USER_MODEL = "blango_auth.User"
 
     # Application definition
 
@@ -54,7 +55,8 @@ class Dev(Configuration):
         'crispy_forms',
         'crispy_bootstrap5',
         'blog',
-        "debug_toolbar"
+        "debug_toolbar",
+        'blango_auth'
     ]
 
     MIDDLEWARE = [
