@@ -33,7 +33,7 @@ def post_list(request):
     post = Post.objects.create(**post_data)
     return HttpResponse(
       status=HTTPStatus.CREATED,
-      header={"Location": reverse("api_post_detail", args=(post.pk,))},
+      headers={"Location": reverse("api_post_detail", args=(post.pk,))},
     )
   
   return HttpResponseNotAllowed(['GET', 'POST'])
