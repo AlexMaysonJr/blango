@@ -11,6 +11,11 @@ class TagField(serializers.SlugRelatedField):
             self.fail(f"Tag value {data} is invalid")
 
 
+class TagSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Tag
+    fields = '__all__'
+
 class PostSerializer(serializers.ModelSerializer):
   tags = TagField(
       slug_field="value", many=True, queryset=Tag.objects.all()
