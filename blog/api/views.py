@@ -21,6 +21,3 @@ class UserDetail(generics.RetrieveAPIView):
   lookup_field = 'email'
   queryset = User.objects.all()
   serializer_class = UserSerializer
-
-
-class 
